@@ -1,0 +1,5 @@
+<div *ngFor="let task of tasks">
+    <input type="checkbox" [(ngModel)]="task.completed"> {{ task.title }}
+</div>
+<input [(ngModel)]="newTask" placeholder="Add new task">
+<button (click)="addTask()">Add</button>
