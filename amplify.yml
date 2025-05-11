@@ -1,16 +1,16 @@
-version: 1
 frontend:
   phases:
     preBuild:
       commands:
-        - npm ci
+        - "npx ng version"
     build:
       commands:
-        - npx ng build task-tracker --configuration production
+        - "npx ng build --configuration=production"
   artifacts:
     baseDirectory: dist/task-tracker
     files:
       - '**/*'
   cache:
     paths:
+      - .npm/**/*
       - node_modules/**/*
