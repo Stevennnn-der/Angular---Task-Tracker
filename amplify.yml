@@ -6,7 +6,7 @@ frontend:
         - npm ci
     build:
       commands:
-        - npm run build
+        - npx ng build task-tracker --configuration production
   artifacts:
     baseDirectory: dist/task-tracker
     files:
